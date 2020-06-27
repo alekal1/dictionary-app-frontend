@@ -1,0 +1,113 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#footer {
+  bottom: 0;
+  width: 100%;
+}
+
+body {
+  background: #757F9A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #D7DDE8, #757F9A);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#title-jumbotron {
+  width: 50%;
+  @media only screen and (max-width: 500px) {
+    width: 100%;
+  }
+}
+
+.dropdown-menu {
+  background-color: #dfe3e8;
+}
+
+#wrapper {
+  border: #757F9A solid 2px;
+  width: 50%;
+  @media only screen and (max-width: 770px) {
+    width: 100%;
+  }
+}
+
+.cell {
+  display: flex;
+  border: #D7DDE8 solid;
+  width: auto;
+  height: 100px;
+}
+
+#selection {
+  display: none;
+  position: fixed;
+}
+
+#selection > .split {
+  display: block;
+}
+
+#selection > span {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #D7DDE8;
+  background: #757F9A;
+  color: #ddd;
+  padding: 2px;
+  cursor: pointer;
+}
+
+#selection > span:hover {
+  background: #55a;
+}
+
+#eng-dictionary-title {
+  margin-left: 20%;
+  @media only screen and (max-width: 500px) {
+    margin-left: 0;
+  }
+}
+
+#eng-translate-card {
+  width: 50%;
+  @media only screen and (max-width: 500px) {
+    width: 100%;
+  }
+}
