@@ -19,4 +19,15 @@ First of all, open the terminal and type `npm i` for dependency installation. It
 
 ### Step 3: Run the application
 
-Open the terminal and type `npm start`. At the end of it you will see the message, that it running on `localhost:3000`
+Open the terminal and type `npm start`. At the end of it you will see the message, that it running on `localhost:3000`.
+
+## Run using command line
+
+### Step 1: Downloand all the files
+
+You will need to download files and save them on your machine.
+
+### Step 2: Run command line
+
+Open the command line and nagivate to place where you saved all the projects files and type `npm i` for dependencies downoload and then `npm start`.
+Go to `localhost:3000` and see application running!
