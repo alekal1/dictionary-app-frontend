@@ -6,22 +6,18 @@ This repository contains frontend for Dictionary project developed during the te
 ### Make sure that you have installed backend correctly.
 Backend: `https://github.com/alekal1/dictionary-app-backend`
 
-## Installation guide using WebStroms
+## Installation guide using WebStrom
 
 ### Step 1: Clone the project
 
 You will need to clone this project so that you can access all the necessary files, configs etc.
-To clone the project just copy the link and type `https://github.com/alekal1/dictionary-app-backend.git`
-at the preferred location on your machine.
+To clone the project into WebStorm click `Get from Version Control`. Type `https://github.com/alekal1/dictionary-app-frontend.git`
+, choose the preferred location on your machine and click clone.
 
-### Step 2: Run the appication
+### Step 2: Pre-run the appication
 
-Go to `src/main/java/com.teliatrainee.estengdictionary/Main` and click the green arrow.
+First of all, open the terminal and type `npm i` for dependency installation. It will take some time to install all the dependencies.
 
-![Image of back-end start](https://github.com/alekal1/dictionary-app-backend/blob/master/backEndStart.png)
+### Step 3: Run the application
 
-If there are no problems, back-end application is running and you will see the following message:
-
-![Image of running spring boot](https://github.com/alekal1/dictionary-app-backend/blob/master/springBootRunning.png)
-
-application is running on `localhost:8080`
+Open the terminal and type `npm start`. At the end of it you will see the message, that it running on `localhost:3000`
