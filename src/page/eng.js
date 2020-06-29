@@ -3,13 +3,35 @@ import React, {Component} from 'react';
 // Bootstrap components import
 import {Button, Card, Col, Jumbotron, Row} from "react-bootstrap";
 import {PlusCircle} from "react-bootstrap-icons";
+import AddWordModal from "../components/word_add_components/AddWordModal";
+import { LinkContainer } from 'react-router-bootstrap'
+
+
+function AddWord() {
+    const [modalShow, setModalShow] = React.useState(false);
+    return (
+        <>
+            <Button variant={"secondary"} onClick={() => setModalShow(true)}>
+                <PlusCircle size={20} className={'mb-1'}/> Add your word
+            </Button>
+
+            <AddWordModal
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+                translationType={"ENG_EST"}
+            />
+        </>
+    )
+}
+
 
 class Eng extends Component {
     constructor(props) {
         super(props);
         this.state = {
             serverUrl: "http://localhost:8080/api/v1/user-dictionary",
-            translations: []
+            translations: [],
+            searchWord: ''
         }
     }
 
@@ -23,6 +45,7 @@ class Eng extends Component {
         );
     }
 
+    // Extract data from fetch.
     extractData(res) {
         // Get all words which translation type is ENG_EST and save them in state.
         let translations = this.state.translations;
@@ -41,26 +64,43 @@ class Eng extends Component {
         }
     }
 
+    handleSearchWord = (e) => {
+        this.setState({searchWord: e.target.value})
+    };
+
+    handleDynamicSearch = () => {
+        return this.state.translations.filter(term => term.word.toLowerCase().includes(this.state.searchWord.toLowerCase()))
+    };
+
     render() {
         return (
             <div>
                 <Jumbotron className={'w-75 ml-auto mr-auto'}>
                     <Row className={'text-center'}>
-                        <Col md={10}>
+                        <Col md={1}>
+                            <LinkContainer to={'/'}>
+                                <Button variant={"secondary"}>Back</Button>
+                            </LinkContainer>
+                        </Col>
+                        <Col md={9}>
                             <h1 id={'eng-dictionary-title'}>English-Estonian dictionary</h1>
                         </Col>
-                        <Col md>
+                        <Col md={2}>
                             <h1 className={'mb-4 text-center'}>
-                                <Button variant={"secondary"}>
-                                    <PlusCircle size={20} className={'mb-1'}/> Add your word
-                                </Button>
+                                <AddWord/>
                             </h1>
                         </Col>
                     </Row>
                     <div className="mb-5">
-                        <input className="form-control" type="text" placeholder="Search for a word" aria-label="Search"/>
+                        <input
+                            className="form-control"
+                            type="text"
+                            placeholder="Search for a word"
+                            value={this.state.searchWord}
+                            onChange={this.handleSearchWord}
+                            aria-label="Search"/>
                     </div>
-                    {this.state.translations.map((translations, index) => (
+                    {this.handleDynamicSearch().map((translations, index) => (
                         <Card key={index} className={'mb-5'} id={'eng-translate-card'}>
                             <Card.Header>
                                 Translate for '{translations.word}'

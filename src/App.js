@@ -5,7 +5,8 @@ import Header from "./components/app_components/Header";
 import Footer from "./components/app_components/Footer";
 
 // Page imports
-import Eng from "./page/eng";
+import Eng from "./page/Eng";
+import Est from "./page/Est";
 import Home from "./page/Home";
 
 // Bootstrap import
@@ -25,6 +26,7 @@ class App extends React.Component{
                 <Switch>
                     <Route exact path='/' component={Home}/>
                     <Route exact path='/eng' component={Eng}/>
+                    <Route exact path='/est' component={Est}/>
                 </Switch>
                 <Footer/>
             </Router>
