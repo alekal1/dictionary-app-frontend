@@ -15,7 +15,7 @@ To clone the project into WebStorm click `Get from Version Control`. Type `https
 
 ### Step 2: Pre-run the appication
 
-First of all, open the terminal and type `npm i` for dependency installation. It will take some time to install all the dependencies.
+First of all, open the terminal (make sure that you are in the right package!) and type `npm i or yarn install` for dependency installation. It will take some time to install all the dependencies.
 
 ### Step 3: Run the application
 
