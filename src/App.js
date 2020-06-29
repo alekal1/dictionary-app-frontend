@@ -5,8 +5,8 @@ import Header from "./components/app_components/Header";
 import Footer from "./components/app_components/Footer";
 
 // Page imports
-import Eng from "./page/Eng";
-import Est from "./page/Est";
+import Eng from "./page/eng";
+import Est from "./page/est";
 import Home from "./page/Home";
 
 // Bootstrap import
