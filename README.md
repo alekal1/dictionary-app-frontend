@@ -3,7 +3,7 @@
 This repository contains frontend for Dictionary project developed during the **Intership** at Telia.
 
 ### Make sure that you have installed backend correctly.
-Backend: `https://github.com/alekal1/dictionary-app-backend`
+Backend: [https://github.com/alekal1/dictionary-app-backend](https://github.com/alekal1/dictionary-app-backend)
 
 ## Installation guide using WebStrom
 
